@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://8syacufc0hko"]
+
+[ext_resource type="Script" uid="uid://dkbgq8khlsq4g" path="res://Scense/UI/hearts/heart.gd" id="1_jt834"]
+[ext_resource type="Texture2D" uid="uid://cmwmqpqwvsaxm" path="res://Recourses/Sprites/hearts.png" id="1_shltc"]
+
+[node name="Heart" type="Panel" unique_id=2039308411]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1120.0
+offset_bottom = -616.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_jt834")
+
+[node name="Hearts" type="Sprite2D" parent="." unique_id=357306617]
+position = Vector2(16, 16)
+texture = ExtResource("1_shltc")
+hframes = 3
+region_rect = Rect2(7.395, 0, 0, 0)

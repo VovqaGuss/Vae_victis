@@ -1,0 +1,103 @@
+[gd_scene format=3 uid="uid://btc6eyybn0gx3"]
+
+[ext_resource type="PackedScene" uid="uid://cgcsy617af0lg" path="res://Scense/Entity_cls/Entity.tscn" id="1_1xfrt"]
+[ext_resource type="Texture2D" uid="uid://c5jiufu2yeoya" path="res://Recourses/Sprites/player_sheet.png" id="2_bc01y"]
+[ext_resource type="Script" uid="uid://c614dcjxx3uh1" path="res://Scense/Entity_cls/Player_cls/player_entity.gd" id="2_ekpir"]
+[ext_resource type="Texture2D" uid="uid://cp1gfbltk2mxc" path="res://Recourses/Sprites/Sprite-0001-Sheet.png" id="3_nenp7"]
+[ext_resource type="Script" uid="uid://bm65y03fqngar" path="res://Scense/Entity_cls/Player_cls/camera_2d.gd" id="4_vvusg"]
+
+[sub_resource type="Animation" id="Animation_vvusg"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [5]
+}
+
+[sub_resource type="Animation" id="Animation_nenp7"]
+resource_name = "idle"
+length = 3.0333333
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2.2333333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [5, 6]
+}
+
+[sub_resource type="Animation" id="Animation_j50ih"]
+resource_name = "run"
+length = 0.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.16666667, 0.33333334),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [0, 1, 2]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_57lsw"]
+_data = {
+&"RESET": SubResource("Animation_vvusg"),
+&"idle": SubResource("Animation_nenp7"),
+&"run": SubResource("Animation_j50ih")
+}
+
+[node name="Entity" unique_id=290885146 instance=ExtResource("1_1xfrt")]
+script = ExtResource("2_ekpir")
+max_speed = 150.0
+friction = 50.0
+acceleration = 25.0
+
+[node name="Sprite0001Sheet" type="Sprite2D" parent="." index="0" unique_id=1564391676]
+position = Vector2(-0.5999985, -1.5999985)
+scale = Vector2(2.4, 2.4)
+texture = ExtResource("3_nenp7")
+hframes = 15
+vframes = 2
+
+[node name="Sprite2D" parent="." index="1" unique_id=1371627441]
+position = Vector2(0.40000153, -3.5999985)
+texture = ExtResource("2_bc01y")
+hframes = 7
+vframes = 2
+frame = 5
+
+[node name="Collizion" parent="." index="2" unique_id=2125094394]
+position = Vector2(0, 4)
+rotation = 1.5707964
+
+[node name="HeartBox" parent="." index="3" unique_id=862656750]
+position = Vector2(0, -5)
+
+[node name="Shape" parent="HeartBox" index="0" unique_id=175218293]
+position = Vector2(0, 2)
+
+[node name="Camera2D" type="Camera2D" parent="." index="4" unique_id=741622342]
+position = Vector2(0, -4)
+zoom = Vector2(3, 3)
+limit_enabled = false
+position_smoothing_enabled = true
+script = ExtResource("4_vvusg")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="5" unique_id=1065400896]
+libraries/ = SubResource("AnimationLibrary_57lsw")

@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://cgcsy617af0lg"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_aq5wj"]
+radius = 3.0
+height = 6.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vu2q8"]
+radius = 5.0
+height = 14.0
+
+[node name="Entity" type="CharacterBody2D" unique_id=290885146]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1371627441]
+
+[node name="Collizion" type="CollisionShape2D" parent="." unique_id=2125094394]
+shape = SubResource("CapsuleShape2D_aq5wj")
+debug_color = Color(0, 0.9764706, 0.972549, 0.41960785)
+
+[node name="HeartBox" type="Area2D" parent="." unique_id=862656750]
+
+[node name="Shape" type="CollisionShape2D" parent="HeartBox" unique_id=175218293]
+shape = SubResource("CapsuleShape2D_vu2q8")
+debug_color = Color(0.9957455, 0.061379686, 0, 0.41960785)

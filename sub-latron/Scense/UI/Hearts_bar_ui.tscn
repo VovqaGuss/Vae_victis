@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://n40j5h0nu6ym"]
+
+[ext_resource type="Script" uid="uid://je4jrk1pdxnw" path="res://Scense/UI/hearts_bar_ui.gd" id="1_w8yuq"]
+
+[node name="HeartBar" type="HBoxContainer" unique_id=1104121855]
+clip_contents = true
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 32
+script = ExtResource("1_w8yuq")
+metadata/_edit_use_anchors_ = true
