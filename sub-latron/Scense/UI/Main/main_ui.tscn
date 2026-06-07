@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://15y2tnktnxu"]
+
+[ext_resource type="PackedScene" uid="uid://n40j5h0nu6ym" path="res://Scense/UI/Hearts_bar_ui.tscn" id="1_fqn5c"]
+
+[node name="Main_UI" type="Control" unique_id=1464284836]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1532830646]
+
+[node name="HeartBar" parent="CanvasLayer" unique_id=1104121855 instance=ExtResource("1_fqn5c")]
+anchors_preset = -1
+grow_horizontal = 1
+grow_vertical = 1
+count_hearts = 3
+
+[node name="Button" type="Button" parent="CanvasLayer" unique_id=514424711]
+offset_left = 656.0
+offset_top = 360.0
+offset_right = 714.0
+offset_bottom = 391.0
+text = "Attack"
+
+[node name="TextEdit" type="TextEdit" parent="CanvasLayer" unique_id=504563754]
+offset_left = 472.0
+offset_top = 288.0
+offset_right = 712.0
+offset_bottom = 352.0
+pivot_offset = Vector2(40.5, 0)
+
+[connection signal="pressed" from="CanvasLayer/Button" to="CanvasLayer/HeartBar" method="_on_button_pressed"]
+[connection signal="text_set" from="CanvasLayer/TextEdit" to="CanvasLayer/HeartBar" method="_on_text_edit_text_set"]

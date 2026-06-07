@@ -18,3 +18,10 @@ position = Vector2(16, 16)
 texture = ExtResource("1_shltc")
 hframes = 3
 region_rect = Rect2(7.395, 0, 0, 0)
+
+[node name="Label" type="Label" parent="." unique_id=1072482902]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 32.0
+offset_right = 48.0
+offset_bottom = 55.0

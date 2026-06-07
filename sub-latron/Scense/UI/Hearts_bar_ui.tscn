@@ -4,11 +4,11 @@
 
 [node name="HeartBar" type="HBoxContainer" unique_id=1104121855]
 clip_contents = true
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/separation = 32
+offset_right = 1.0
+offset_bottom = 23.0
+theme_override_constants/separation = 34
 script = ExtResource("1_w8yuq")
 metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="." unique_id=2064590232]
+layout_mode = 2

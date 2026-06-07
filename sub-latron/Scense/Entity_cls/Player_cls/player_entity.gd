@@ -1,5 +1,8 @@
 extends CharacterBody2D
 
+# Привет тому кто смотрит мой говно-код >:3
+# Тебе тут искать нечего!
+
 @export var max_speed : float
 @export var friction : float
 @export var acceleration : float
@@ -14,8 +17,6 @@ enum STATE {
 	IDLE,
 	RUN
 }
-
-var dfasgjpaouh34v3 = "НУКУ ПОСМОТРЮ ЧТО ТАМ Я НАПИСАЛ, МЫ ЖЕ ТАКИЕ ВСЕ ИЗ СЕБЯ АХУЕННЫЕ ПРОГРАММИСТЫ!!!!"
 
 var current_state : STATE
 
@@ -72,7 +73,6 @@ func heal(amount):
 
 func anim(delta):
 	if velocity:
-		print(move_toward(animations.speed_scale , 1.0, delta))
 		animations.speed_scale = move_toward(animations.speed_scale , 1.5, delta)
 	else:
 		animations.speed_scale = 1
