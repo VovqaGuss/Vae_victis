@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://xmq5cd4s1qfs"]
+
+[ext_resource type="PackedScene" uid="uid://cgcsy617af0lg" path="res://Scense/Entity_cls/Entity.tscn" id="1_mphw2"]
+[ext_resource type="Texture2D" uid="uid://lfgk81h7pt1y" path="res://icon.svg" id="2_ufy6r"]
+
+[node name="Entity_Enemy" unique_id=290885146 instance=ExtResource("1_mphw2")]
+
+[node name="Sprite2D" parent="." index="0" unique_id=1371627441]
+position = Vector2(2.3841858e-07, 0)
+scale = Vector2(0.07812501, 0.08593746)
+texture = ExtResource("2_ufy6r")
