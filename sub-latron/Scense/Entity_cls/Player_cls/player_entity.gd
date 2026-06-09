@@ -2,6 +2,7 @@ extends CharacterBody2D
 
 # Привет тому кто смотрит мой говно-код >:3
 # Тебе тут искать нечего!
+# ЭТО НЕ ВИРУС (наверное)
 
 @export var max_speed : float
 @export var friction : float

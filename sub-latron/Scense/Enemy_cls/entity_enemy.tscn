@@ -1,11 +1,21 @@
 [gd_scene format=3 uid="uid://xmq5cd4s1qfs"]
 
 [ext_resource type="PackedScene" uid="uid://cgcsy617af0lg" path="res://Scense/Entity_cls/Entity.tscn" id="1_mphw2"]
+[ext_resource type="Script" uid="uid://bgqwenn8d1gc5" path="res://Scense/Enemy_cls/entity_enemy.gd" id="2_cdhe7"]
 [ext_resource type="Texture2D" uid="uid://lfgk81h7pt1y" path="res://icon.svg" id="2_ufy6r"]
 
 [node name="Entity_Enemy" unique_id=290885146 instance=ExtResource("1_mphw2")]
+script = ExtResource("2_cdhe7")
 
 [node name="Sprite2D" parent="." index="0" unique_id=1371627441]
 position = Vector2(2.3841858e-07, 0)
 scale = Vector2(0.07812501, 0.08593746)
 texture = ExtResource("2_ufy6r")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="." index="3" unique_id=342024143]
+debug_enabled = true
+
+[node name="TimerNewTargetPosition" type="Timer" parent="." index="4" unique_id=1000766197]
+autostart = true
+
+[connection signal="timeout" from="TimerNewTargetPosition" to="." method="_on_timer_new_target_position_timeout"]
