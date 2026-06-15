@@ -19,6 +19,7 @@ boot_splash/minimum_display_time=3
 [autoload]
 
 Eventbus="*uid://r8utm5auvo7l"
+Rooms="*uid://b7gbvfcmke6gt"
 
 [input]
 
@@ -51,3 +52,4 @@ s={
 
 textures/canvas_textures/default_texture_filter=0
 rendering_device/driver.windows="d3d12"
+environment/defaults/default_clear_color=Color(0.3137255, 0.21960784, 0.3137255, 1)

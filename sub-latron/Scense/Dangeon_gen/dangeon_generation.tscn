@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://ci5l08g43ggcd"]
+
+[node name="DangeonGeneration" type="Node2D" unique_id=2102353916]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1687304647]
+
+[node name="ObjectsLayer" type="Node2D" parent="." unique_id=1545222015]
