@@ -94,6 +94,7 @@ position = Vector2(0, 2)
 
 [node name="Camera2D" type="Camera2D" parent="." index="4" unique_id=741622342]
 position = Vector2(0, -4)
+enabled = false
 zoom = Vector2(3, 3)
 limit_enabled = false
 position_smoothing_enabled = true

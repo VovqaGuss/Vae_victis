@@ -1,7 +1,24 @@
 [gd_scene format=3 uid="uid://ci5l08g43ggcd"]
 
-[node name="DangeonGeneration" type="Node2D" unique_id=2102353916]
+[ext_resource type="Script" uid="uid://lnwqh4aakdfw" path="res://Scense/Dangeon_gen/dangeon_generation.gd" id="1_pltnu"]
+[ext_resource type="TileSet" uid="uid://b1tunxx2634th" path="res://Recourses/TileSet/main_tile_set.tres" id="2_6xotb"]
+[ext_resource type="PackedScene" uid="uid://btc6eyybn0gx3" path="res://Scense/Entity_cls/Player_cls/player_entity.tscn" id="3_8nyt4"]
 
-[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1687304647]
+[node name="DangeonGeneration" type="Node2D" unique_id=2102353916 node_paths=PackedStringArray("tile_map")]
+script = ExtResource("1_pltnu")
+tile_map = NodePath("TileMap")
 
 [node name="ObjectsLayer" type="Node2D" parent="." unique_id=1545222015]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=554555828]
+tile_set = ExtResource("2_6xotb")
+
+[node name="TileMap" type="TileMap" parent="." unique_id=1832216524]
+tile_set = ExtResource("2_6xotb")
+format = 2
+
+[node name="Player" parent="." unique_id=290885146 instance=ExtResource("3_8nyt4")]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1261798763]
+position = Vector2(1453, 579)
+zoom = Vector2(0.34, 0.34)

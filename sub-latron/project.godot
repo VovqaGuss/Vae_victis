@@ -19,7 +19,7 @@ boot_splash/minimum_display_time=3
 [autoload]
 
 Eventbus="*uid://r8utm5auvo7l"
-Rooms="*uid://b7gbvfcmke6gt"
+RoomParameters="*uid://b7gbvfcmke6gt"
 
 [input]
 
