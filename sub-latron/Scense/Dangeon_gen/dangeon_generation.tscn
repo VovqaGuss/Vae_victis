@@ -19,6 +19,4 @@ format = 2
 
 [node name="Player" parent="." unique_id=290885146 instance=ExtResource("3_8nyt4")]
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=1261798763]
-position = Vector2(1453, 579)
-zoom = Vector2(0.34, 0.34)
+[node name="Camera2D2" type="Camera2D" parent="Player" unique_id=1261798763]
